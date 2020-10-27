@@ -1,6 +1,8 @@
 let array = [];
 const head = function(array) {
-  return array[0];
+  let head = array[0];
+  console.log(array);
+  return head;
 
 };
 
