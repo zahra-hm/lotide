@@ -1,14 +1,4 @@
-const assertEqual = function(actual, expected) {
 
-  if (actual === expected) {
-    //console.log("✅✅✅ Assertion Passed: " + [actual] + " === " + [expected]);
-    console.log(`✅✅✅ Assertion Passed: ${actual} ===  ${expected}`);
-
-  } else if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !==  ${expected}`);
-
-  }
-};
 
 const eqArrays = function(arr1, arr2) {
 
@@ -27,8 +17,15 @@ const eqArrays = function(arr1, arr2) {
     }
   }
 
+
+  if (answer === true) {
+    console.log("✅✅✅ ", arr1, " is EQUAL to ", arr2)
+  } else {
+    console.log("🛑🛑🛑 ", arr1, " is NOT EQUAL to ", arr2)
+  }
+
   /* This also works but doesn't maintain formatting when printing arrays
-  
+
   if (answer === true) {
     console.log(`✅✅✅  ${arr1} is equal to ${arr2}!`)
   } else {
@@ -36,11 +33,6 @@ const eqArrays = function(arr1, arr2) {
   }
   */
 
-  if (answer === true) {
-    console.log("✅✅✅ ", arr1, " is EQUAL to ", arr2)
-  } else {
-    console.log("🛑🛑🛑 ", arr1, " is NOT EQUAL to ", arr2)
-  }
 
 };
 
