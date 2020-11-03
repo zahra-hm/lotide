@@ -3,7 +3,6 @@
 const eqArrays = function(arr1, arr2) {
 
   let i = 0;
-  let answer = Boolean;
   for (i = 0; i < arr1.length; i++) {
 
     if (arr1.length === arr2.length) {
@@ -16,28 +15,27 @@ const eqArrays = function(arr1, arr2) {
       answer = false
     }
   }
+  return answer;
+  //console.log(answer);
+};
 
-
-  if (answer === true) {
-    console.log("✅✅✅ ", arr1, " is EQUAL to ", arr2)
+const assertArraysEqual = function(actual, expected) {
+  // actual is eqArray function
+  if ((!actual && !expected) || (actual && expected)) {
+    console.log("PASS");
   } else {
-    console.log("🛑🛑🛑 ", arr1, " is NOT EQUAL to ", arr2)
+    console.log("FAIL");
   }
-
-  /* This also works but doesn't maintain formatting when printing arrays
-
-  if (answer === true) {
-    console.log(`✅✅✅  ${arr1} is equal to ${arr2}!`)
-  } else {
-    console.log(`🛑🛑🛑  ${arr1} is NOT equal to ${arr2}!`)
-  }
-  */
-
-
 };
 
 
-eqArrays([1, 2, 3], [1, 2, 3]);
-eqArrays([1, 2, 3], [3, 2, 1]);
-eqArrays(["1", "2", "3"], ["1", "2", "3"]);
-eqArrays(["1", "2", "3"], ["1", "2", 3]);
+module.exports = assertArraysEqual;
+
+
+
+//TEST
+
+// assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => PASS
+// assertArraysEqual(eqArrays([1, 2, 3], [3, 9, 1]), false); // => PASS
+// assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => PASS
+// assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // => FAIL
