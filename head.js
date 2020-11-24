@@ -8,9 +8,8 @@ const head = function(array) {
 const assertEqual = require('./assertEqual');
 
 // TEST CODE
-// assertEqual(head([5,6,7]), 5);
-// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Helloo");
-//console.log(head([5,6,7]));
-//console.log(head(["Hello", "Lighthouse", "Labs"]));
+assertEqual(head([5,6,7]), 5); //PASS
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Helloo"); //FAIL
+
 
 module.exports = head;
