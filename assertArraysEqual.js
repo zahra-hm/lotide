@@ -1,27 +1,30 @@
+const eqArrays = require('./eqArrays');
 
 
-const eqArrays = function(arr1, arr2) {
+// const assertArraysEqual = function(actual, expected) {
+//   // actual is eqArray function
+//   if ((!actual && !expected) || (actual && expected)) {
+//     console.log("PASS");
+//   } else {
+//     console.log("FAIL");
+//   }
+// };
 
-  let i = 0;
-  for (i = 0; i < arr1.length; i++) {
+// this version of assertArraysEqual works with middleTest
+// const assertArraysEqual = function(actual, expected) {
+//   // actual is eqArray function
+//   if (eqArrays(actual, expected)) {
+//     console.log("PASS");
+//   } else {
+//     console.log("FAIL");
+//   }
+// };
 
-    if (arr1.length === arr2.length) {
-      if (arr1[i] === arr2[i]) {
-        answer = true;
-      } else if (arr1[i] !== arr2[i]) {
-        answer = false;
-      }
-    } else {
-      answer = false
-    }
-  }
-  return answer;
-  //console.log(answer);
-};
 
+// //assertArraysEqualTest works with this
 const assertArraysEqual = function(actual, expected) {
   // actual is eqArray function
-  if ((!actual && !expected) || (actual && expected)) {
+  if (actual, expected) {
     console.log("PASS");
   } else {
     console.log("FAIL");
@@ -31,11 +34,3 @@ const assertArraysEqual = function(actual, expected) {
 
 module.exports = assertArraysEqual;
 
-
-
-//TEST
-
-// assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => PASS
-// assertArraysEqual(eqArrays([1, 2, 3], [3, 9, 1]), false); // => PASS
-// assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => PASS
-// assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // => FAIL
